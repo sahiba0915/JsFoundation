@@ -26,19 +26,19 @@ console.log(countdown)
 /* 3. Write a `do-while` loop that prompts the user to enter their favorite tea type until they enter `stop`. Store each tea type in an array name `teaCollection`. */
 // Note run this in browser as nodejs doesn't support prompt function.
 
-let teaCollection = []
-let teaNames
+// let teaCollection = []
+// let teaNames
 
-do {
-    teas = prompt(`Enter your favorite tea (type "stop" to finish)`)
+// do {
+//     teas = prompt(`Enter your favorite tea (type "stop" to finish)`)
 
-    if(teas !== "stop"){
-        teaCollection.push(teas)
-    }
+//     if(teas !== "stop"){
+//         teaCollection.push(teas)
+//     }
     
-} while (teas !== "stop");
+// } while (teas !== "stop");
 
-console.log(teaCollection)
+// console.log(teaCollection)
 
 /* 4. Write a `do-while` loop that adds numbers from 1 to 3 and store the result in varaible named `total`. */
 
@@ -187,3 +187,47 @@ let worldCities = {
  }
 
  console.log(largeCities)
+
+  /* 11. Use a `forEach` loop that iterates through the array `["earl grey", "green tea", "chai", "oolong tea"]`. Stop the loop when "chai" is found , and store all the previous tea types in an array named "availableTeas".*/
+
+  let availableTeas = []
+
+  let teasTypes = ["earl grey", "green tea", "chai", "oolong tea"]
+
+  teasTypes.forEach(teas => {
+    if(teas !== "chai"){
+        availableTeas.push(teas)
+    }
+  });
+
+  console.log(availableTeas)
+
+
+/* 12. Write a "for" loop that iterates through the array [2, 5, 7, 9] . Skip the value "7" and multiply rest by 2. Store the results in a new array named "doubledNumbers". */
+
+let doubledNumbers = []
+let oldNumber = [2, 5, 7, 9]
+
+for (let k = 0; k < oldNumber.length; k++) {
+    const numbers = oldNumber[k];
+    if(numbers === 7){
+        continue
+    }
+    doubledNumbers.push(numbers * 2)
+}
+
+console.log(doubledNumbers)
+
+/* 13. Use a `for-of` loop to iterate through the array `["chai", "green tea", "black tea", "jasine tea", "herbal tea"]`. and stop when the length of the current tea name is greater than 10. Store the result in a new array named `shortTeas`.*/
+
+let shortTeas = []
+let myTeas = ["chai", "green tea", "black tea", "jasmine tea", "herbal tea"]
+
+for (const tea of myTeas) {
+    if(tea.length > 10){
+        break
+    }
+    shortTeas.push(tea)
+}
+
+console.log(shortTeas)
