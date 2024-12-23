@@ -85,3 +85,54 @@ let cityBucketList = ["Kyoto", "London", "Cape Town", "Vancouver"]
 
 let isLondonInList = cityBucketList.includes("London")
 console.log(isLondonInList)
+
+/* 10. Write a function squareNumbers(arr) using map() and arrow functions. */
+
+const squareNumbers = (arr) => (
+   arr.map(item => item * item)
+ );
+ 
+ let squaredNumbers = squareNumbers([1,2,3])
+ console.log(squaredNumbers)
+
+ 
+/* 11. Create a function filterEvenNumbers(arr) using filter() and arrow functions. */
+
+const filterEvenNumbers = (arr) => (
+   arr.filter(item => item % 2 === 0)
+ );
+ 
+ let evenNumbers = filterEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8]);
+ console.log(evenNumbers);
+
+/* 12. Write a function sumPositiveNumbers(arr) that takes an array of numbers and returns the sum of all positive numbers using filter() and reduce() with arrow functions. */
+
+const sumPositiveNumbers = (arr) => (
+   arr.filter(item => item > 0)
+   .reduce((sum, item) => (sum + item), 0)
+);
+
+let positiveNumbers = sumPositiveNumbers([1, -2, 3, -4, 6])
+console.log(positiveNumbers);
+
+/* 13. Write a function getNames(arr) that takes an array of objects where each object has a name property, and returns an array of just the names using map() and arrow functions. */
+
+let arr = [
+   {name: "Sahiba", age: "24"},
+   {name: "Komal", age: "23"},
+]
+const getNames = (arr) => (
+   arr.map(item => item.name)
+);
+
+let getName = getNames(arr) 
+console.log(getName)
+
+/* 14. Write a function findLongestWord(arr) that takes an array of strings and returns the longest word using reduce() and an arrow function. */
+
+const findLongestWord = (arr) => (
+   arr.reduce((acc, curr) => curr.length > acc.length ? curr : acc, '') 
+);
+
+let longestWord = findLongestWord(["sahiba", "komal"])
+console.log(longestWord)
